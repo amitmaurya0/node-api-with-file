@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json())
-mongoose.connect('mongodb://test_user:user_123@ds241723.mlab.com:41723/test_1', {useNewUrlParser: true}, function (err){
+mongoose.connect('', {useNewUrlParser: true}, function (err){
     if(err){
         console.log('unable to connect mongodb', err);
         
