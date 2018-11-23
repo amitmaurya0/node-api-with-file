@@ -9,7 +9,10 @@ var cors = require('cors');
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json())
+<<<<<<< HEAD
 app.use(cookieParser());
+=======
+>>>>>>> bceb1db99235a47ea8f5b27dfd8db1480db2acd1
 mongoose.connect('', {useNewUrlParser: true}, function (err){
     if(err){
         
