@@ -18,8 +18,9 @@ var storage = multer.diskStorage({
 
 var upload = multer({storage: storage});
 
-route.get('/list', user.list);
+//route.get('/list', user.list);
 route.post('/signup', upload.single('image'), user.create);
+route.post('/login', user.login);
 
 
 module.exports = route;
