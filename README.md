@@ -16,6 +16,6 @@ Server Port : 4200
 
 ## Database Configuration
 
-Put Your mongo db url in 
-config/database.js
-   --mongoUrl : ''
+Put Your mongo db url in <br>
+config/database.js</br>
+ &nbsp;&nbsp;  --mongoUrl : ''
