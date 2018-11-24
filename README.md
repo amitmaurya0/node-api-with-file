@@ -11,3 +11,8 @@ In the project directory, you can run:
 
 Runs the app in the development mode.<br>
 Server Port : 4200
+
+
+Put Your mongo db url in 
+## config/database.js
+mongoUrl : ''
