@@ -6,16 +6,16 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var cookieParser = require('cookie-parser');
 var cors = require('cors');
+var config = require('./config/database');
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json())
-<<<<<<< HEAD
 app.use(cookieParser());
-=======
->>>>>>> bceb1db99235a47ea8f5b27dfd8db1480db2acd1
-mongoose.connect('', {useNewUrlParser: true}, function (err){
+app.use(express.static('public'))
+mongoose.connect(config.mongoUrl, {useNewUrlParser: true}, function (err){
     if(err){
         
+        console.log('Unable to connect the database.');
     }else{
         console.log('DB connected succesfully.');
     }

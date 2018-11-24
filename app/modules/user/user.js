@@ -8,12 +8,11 @@ var user = {};
 user.create = function(req, res){
     var image_name = '';
     if(req.file)
-        image_name = appConfig.userImageDestination+"/"+req.file.filename;
+        image_name = appConfig.userServeFile+"/"+req.file.filename;
     else
         image_name = '';
     
-   // res.json({status:false, msg:"img upload."})
-  //  return; 
+  
     var input = req.body; 
 
     var newUser = new User({
@@ -21,9 +20,9 @@ user.create = function(req, res){
             first: input.first_name,
             last: input.last_name
         },
+        address: input.address,
+        city: input.city,
         email: input.email,
-        mobile: input.mobile,
-        country: input.country,
         password: input.password,
         profileImage: image_name,
     })

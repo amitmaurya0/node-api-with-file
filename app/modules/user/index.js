@@ -1,5 +1,6 @@
 var route = require('express').Router();
 var user = require('./user');
+var action = require('./action');
 var multer = require('multer');
 var appConfig = require('./../../shared/config');
 
@@ -21,6 +22,7 @@ var upload = multer({storage: storage});
 //route.get('/list', user.list);
 route.post('/signup', upload.single('image'), user.create);
 route.post('/login', user.login);
+route.post('/profile', action.get);
 
 
 module.exports = route;

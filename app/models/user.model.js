@@ -10,6 +10,8 @@ var userSchema = new Schema({
     },
     email: { required: true, type: String },
     mobile: String,
+    address: String,
+    city: String,
     profileImage: String,
     country: String,
     password: { required: true, type: String },

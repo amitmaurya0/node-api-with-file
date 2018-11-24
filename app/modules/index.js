@@ -7,11 +7,7 @@ var jwt = require('jsonwebtoken');
 var userInfo = require('./common/index');
 
 router.use('/userauth', user);
-router.use('/user', passport.authenticate('jwt', {session:false}), function(req, res){
-    console.log('====================================');
-    console.log('Hello');
-    console.log('====================================');
-})
+router.use('/user', passport.authenticate('jwt', {session:false}), user)
 
 
 router.get('/checkAuth', passport.authenticate('jwt', {session:false}), function(req, res){
