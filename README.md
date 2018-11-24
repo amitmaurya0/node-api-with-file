@@ -13,6 +13,9 @@ Runs the app in the development mode.<br>
 Server Port : 4200
 
 
+
+## Database Configuration
+
 Put Your mongo db url in 
-## config/database.js
-mongoUrl : ''
+config/database.js
+   --mongoUrl : ''
